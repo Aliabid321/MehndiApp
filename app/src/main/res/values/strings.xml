@@ -2,4 +2,7 @@
     <string name="app_name">MehndiDesignApp</string>
     <string name="more">More</string>
     <string name="featured_channels">Category</string>
+    <string name="channel_home">MostlyViews</string>
+    <string name="share">Share</string>
+    <string name="childCategory">ChildCategory</string>
 </resources>

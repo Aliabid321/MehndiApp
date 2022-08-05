@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
@@ -34,25 +35,15 @@
                 android:layout_marginTop="5dp">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    app:cardCornerRadius="15dp"
-                    android:layout_marginTop="10dp"
                     android:id="@+id/crousal_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_height="250dp">
-                    <com.synnapps.carouselview.CarouselView
-                        android:id="@+id/carouselView_frag"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        app:fillColor="#FFFFFFFF"
-                        app:indicatorMarginVertical="2dp"
-                        app:pageColor="#00000000"
-                        app:radius="3dp"
-                        app:slideInterval="3000"
-                        app:strokeColor="#DDDDDD"
-                        app:strokeWidth="1dp"
-                        tools:ignore="MissingClass" />
+                    app:cardCornerRadius="15dp"
+                    tools:ignore="MissingClass">
+
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
 
@@ -99,13 +90,12 @@
                     <Button
                         android:id="@+id/btn_latest"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:background="@android:color/transparent"
                         android:gravity="center|end"
                         android:text="@string/more"
-
                         android:textAllCaps="false"
                         android:textColor="@color/pink_orange"
                         android:textStyle="bold"
@@ -113,7 +103,7 @@
                 </RelativeLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/featurcategory_recler"
+                    android:id="@+id/reclerFeatured"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
@@ -149,7 +139,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/channel_home"
-                            android:textColor="@color/white"
+                            android:textColor="@color/White"
                             tools:ignore="MissingPrefix"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -164,20 +154,20 @@
                     <Button
                         android:id="@+id/btn_featuredv"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:background="@android:color/transparent"
                         android:gravity="center|end"
-                        tools:ignore="MissingPrefix"
-                        android:textStyle="bold"
                         android:text="@string/more"
                         android:textAllCaps="false"
-                        android:textColor="@color/pink_orange" />
+                        android:textColor="@color/pink_orange"
+                        android:textStyle="bold"
+                        tools:ignore="MissingPrefix" />
                 </RelativeLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/lateschannel_recler"
+                    android:id="@+id/reclerMostView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
@@ -213,7 +203,7 @@
                             android:id="@+id/txt_latest_homef"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/featured_channels"
+                            android:text="@string/childCategory"
                             android:textColor="@color/White"
                             tools:ignore="MissingPrefix"
                             android:textSize="16sp"
@@ -229,20 +219,20 @@
                     <Button
                         android:id="@+id/btn_featured"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:background="@android:color/transparent"
                         android:gravity="center|end"
-                        tools:ignore="MissingPrefix"
-                        android:textStyle="bold"
                         android:text="@string/more"
                         android:textAllCaps="false"
-                        android:textColor="@color/pink_orange" />
+                        android:textColor="@color/pink_orange"
+                        android:textStyle="bold"
+                        tools:ignore="MissingPrefix" />
                 </RelativeLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/featured_channel_recler"
+                    android:id="@+id/reclerChild"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
