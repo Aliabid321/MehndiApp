@@ -2,30 +2,27 @@ package com.example.mehndidesignapp.Activitise;
 
 import static android.content.ContentValues.TAG;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.mehndidesignapp.Adapters.ImageAdapter;
+import com.example.mehndidesignapp.Interface.ItemClickListner;
+import com.example.mehndidesignapp.Models.ConstantModel;
+import com.example.mehndidesignapp.Models.ImageModel;
 import com.example.mehndidesignapp.R;
-import com.example.mehndidesignapp.Models.*;
-import com.example.mehndidesignapp.Adapters.*;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.example.mehndidesignapp.Interface.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements ItemClickListner{
     protected RecyclerView reclerFeatured, reclerMostView, reclerChild;
@@ -36,7 +33,6 @@ public class MainActivity extends AppCompatActivity implements ItemClickListner{
     private ImageAdapter imageAdapter;
     private ImageModel imageModel;
     ItemClickListner clickListner;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
