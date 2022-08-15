@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DesignSurface">
-    <option name="filePathToZoomLevelMap">
-      <map>
-        <entry key="..\:/MehndiDesignApp/app/src/main/res/layout/activity_main.xml" value="0.16" />
-        <entry key="..\:/MehndiDesignApp/app/src/main/res/layout/activity_show_images.xml" value="0.2412280701754386" />
-        <entry key="..\:/MehndiDesignApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
-        <entry key="..\:/MehndiDesignApp/app/src/main/res/layout/activity_view_image.xml" value="0.3038949275362319" />
-        <entry key="..\:/MehndiDesignApp/app/src/main/res/layout/imagesresourcefile.xml" value="0.10454155955441302" />
-        <entry key="..\:/MehndiDesignApp/app/src/main/res/layout/resourceimage.xml" value="0.2412280701754386" />
-      </map>
-    </option>
-  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
