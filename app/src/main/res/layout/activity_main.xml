@@ -43,22 +43,16 @@
                     android:layout_marginRight="10dp"
                     app:cardCornerRadius="15dp"
                     tools:ignore="MissingClass">
-                    <com.jama.carouselview.CarouselView
+                    <com.synnapps.carouselview.CarouselView
+                        android:id="@+id/carouselView"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        app:enableSnapping="true"
-                        app:scaleOnScroll="false"
-                        app:setAutoPlay="true"
-                        app:setAutoPlayDelay="3000"
-                        app:carouselOffset="center"
-                        app:indicatorAnimationType="drop"
-                        app:indicatorRadius="5"
-                        app:indicatorPadding="5"
-                        app:indicatorSelectedColor="@color/colorAccent"
-                        app:indicatorUnselectedColor="@color/colorPrimary"
-                        app:size="10"
-                        app:spacing="10"
-                        app:resource="@layout/image_carousel_item"/>
+                        android:layout_height="200dp"
+                        app:fillColor="#FFFFFFFF"
+                        app:pageColor="#00000000"
+                        app:radius="6dp"
+                        app:slideInterval="3000"
+                        app:strokeColor="#FF777777"
+                        app:strokeWidth="1dp"/>
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
 

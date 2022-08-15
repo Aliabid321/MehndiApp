@@ -5,12 +5,15 @@ import static android.content.ContentValues.TAG;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.mehndidesignapp.Adapters.ImageAdapter;
 import com.example.mehndidesignapp.Interface.ItemClickListner;
 import com.example.mehndidesignapp.Models.ConstantModel;
@@ -33,10 +36,14 @@ public class MainActivity extends AppCompatActivity implements ItemClickListner{
     private ImageAdapter imageAdapter;
     private ImageModel imageModel;
     ItemClickListner clickListner;
+    ArrayList<String> images_array_api;
+    //CarouselView carouselView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //setCrousalView();
         setFeaturedCat();
         setMostViewsCat();
         setChildCat();
@@ -164,5 +171,28 @@ public class MainActivity extends AppCompatActivity implements ItemClickListner{
         Intent intent=new Intent(MainActivity.this,ShowImagesActivity.class);
         intent.putExtra(ConstantModel.CATEGORY_KEY,name);
         startActivity(intent);
+    }
+//    public void setCrousalView(){
+//        images_array_api = new ArrayList<>();
+//        carouselView=findViewById(R.id.carouselView);
+//        getCrousalItemfromServer();//Get Items from server......
+//        ViewListener viewListener = new ViewListener() {
+//            int i;
+//
+//            @Override
+//            public View setViewForPosition(int position) {
+//                View customView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.recycler_container_crousel, null);
+//
+//                ImageView image_view = customView.findViewById(R.id.captre);
+//
+//                Glide.with(getApplicationContext()).load(images_array_api.get(position)).into(image_view);
+//
+//
+//                return customView;
+//            }
+//        };
+//    }
+    public void getCrousalItemfromServer(){
+
     }
 }
