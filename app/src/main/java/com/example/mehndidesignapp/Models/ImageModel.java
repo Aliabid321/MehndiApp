@@ -8,14 +8,6 @@ public class ImageModel {
 
     public ImageModel() {
     }
-
-    public ImageModel(String imgName, String imgThumbnail, String imgUrl, String mostViewImage) {
-        this.imgName = imgName;
-        this.imgThumbnail = imgThumbnail;
-        this.imgUrl = imgUrl;
-        this.mostViewImage = mostViewImage;
-    }
-
     public String getImgName() {
         return imgName;
     }

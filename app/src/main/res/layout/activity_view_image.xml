@@ -6,24 +6,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activitise.ViewImageActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"
+        android:layout_height="450dp">
 
+    </LinearLayout>
     <ImageView
         android:id="@+id/showimage"
         android:layout_width="match_parent"
-        android:layout_height="350dp">
+        android:scaleType="fitXY"
+        android:background="@drawable/shape_show_img"
+        android:layout_height="450dp"
+        >
 
     </ImageView>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sharebtn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:id="@+id/sharebtn"
+        android:background="@drawable/shapebtnshare"
+        android:layout_marginBottom="20dp"
         android:text="Share"
         android:textColor="@color/White"
         android:textStyle="bold">
 
-    </Button>
+    </androidx.appcompat.widget.AppCompatButton>
 </RelativeLayout>

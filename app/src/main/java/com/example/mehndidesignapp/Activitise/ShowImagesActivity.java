@@ -2,33 +2,31 @@ package com.example.mehndidesignapp.Activitise;
 
 import static android.content.ContentValues.TAG;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.example.mehndidesignapp.Adapters.ImageAdapter;
-import com.example.mehndidesignapp.Models.*;
+import com.example.mehndidesignapp.Adapters.ShowImagesAdapter;
+import com.example.mehndidesignapp.Interface.ItemClickListener;
+import com.example.mehndidesignapp.Models.ConstantModel;
+import com.example.mehndidesignapp.Models.ImageModel;
 import com.example.mehndidesignapp.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.example.mehndidesignapp.Interface.*;
-import com.example.mehndidesignapp.Adapters.*;
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShowImagesActivity extends AppCompatActivity implements ItemClickListner{
-    protected RecyclerView images_recler;
+public class ShowImagesActivity extends AppCompatActivity implements ItemClickListener {
+    protected RecyclerView images_recycler;
     private List<ImageModel>imageModelList;
     private ImageModel imageModel;
     private ShowImagesAdapter imageAdapter;
@@ -43,7 +41,7 @@ public class ShowImagesActivity extends AppCompatActivity implements ItemClickLi
         init();
     }
     public void init(){
-        images_recler=findViewById(R.id.images_recler);
+        images_recycler =findViewById(R.id.images_recler);
         getMostViews(cateName);
     }
     public void getMostViews(String cateName) {
@@ -63,8 +61,8 @@ public class ShowImagesActivity extends AppCompatActivity implements ItemClickLi
                 }
                 imageAdapter = new ShowImagesAdapter(imageModelList, ShowImagesActivity.this);
                 imageAdapter.setClickCallBack(ShowImagesActivity.this);
-                images_recler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-                images_recler.setAdapter(imageAdapter);
+                images_recycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+                images_recycler.setAdapter(imageAdapter);
                 myRef.child(cateName).removeEventListener(this);
             }
 
@@ -81,7 +79,7 @@ public class ShowImagesActivity extends AppCompatActivity implements ItemClickLi
     public void onClick(View view, int position, String name) {
         ImageModel obj=imageModelList.get(position);
         Intent intent=new Intent(ShowImagesActivity.this,ViewImageActivity.class);
-        intent.putExtra("imgurl",obj.getImgUrl());
+        intent.putExtra("img_url",obj.getImgUrl());
         startActivity(intent);
     }
 }

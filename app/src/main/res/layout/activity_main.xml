@@ -26,8 +26,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
@@ -35,25 +33,17 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp">
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/crousal_card"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    app:cardCornerRadius="15dp"
-                    tools:ignore="MissingClass">
+                    android:id="@+id/card_view"
+                    app:cardCornerRadius="10dp"
+                    android:layout_height="match_parent">
                     <com.synnapps.carouselview.CarouselView
-                        android:id="@+id/carouselView"
+                        android:id="@+id/carsoulviewid"
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        app:fillColor="#FFFFFFFF"
-                        app:pageColor="#00000000"
-                        app:radius="6dp"
-                        app:slideInterval="3000"
-                        app:strokeColor="#FF777777"
-                        app:strokeWidth="1dp"/>
+                        android:layout_height="match_parent">
+                    </com.synnapps.carouselview.CarouselView>
                 </androidx.cardview.widget.CardView>
+
             </RelativeLayout>
 
             <LinearLayout
@@ -97,7 +87,7 @@
                     </LinearLayout>
 
                     <Button
-                        android:id="@+id/btn_latest"
+                        android:id="@+id/btn_more_front_hand"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -161,7 +151,7 @@
                     </LinearLayout>
 
                     <Button
-                        android:id="@+id/btn_featuredv"
+                        android:id="@+id/btn_more_back_hand"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
